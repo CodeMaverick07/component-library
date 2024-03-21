@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+"use client";import React, { useState } from "react";
 export default function IndexPage() {
     const [show, setShow] = useState(null);
     const [profile, setProfile] = useState(false);

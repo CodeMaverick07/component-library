@@ -1,7 +1,19 @@
-import Image from "next/image";
+import React from "react";
+import Bar1 from "./graph/bar-charts.react";
+import Bar2 from "./graph/line-graph.react";
+import Bar3 from "./graph/pie-chart.react";
 
-export default function Home() {
+const page = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+    <div>
+      <div className="text-center font-bold text-xl">1</div>
+      <Bar1 />
+      <div className="text-center font-bold text-xl">2</div>
+      <Bar2 />
+      <div className="text-center font-bold text-xl">3</div>
+      <Bar3 />
+    </div>
   );
-}
+};
+
+export default page;

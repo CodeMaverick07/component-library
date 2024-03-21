@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+"use client";import React, { useState } from "react";
 export default function IndexPage() {
     const [show, setShow] = useState(false);
     const [product, setProduct] = useState(false);

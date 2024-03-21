@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from "react";
 function index() {
   useEffect(() => {});
@@ -6,8 +7,12 @@ function index() {
   };
   const swaptext_form_layout_wizard5 = (el) => {
     const targetText = el.innerText;
-    document.getElementById("drop-down-content-setter_form_layout_wizard5").innerText = targetText;
-    document.getElementById("drop-down-div_form_layout_wizard5").classList.toggle("hidden");
+    document.getElementById(
+      "drop-down-content-setter_form_layout_wizard5"
+    ).innerText = targetText;
+    document
+      .getElementById("drop-down-div_form_layout_wizard5")
+      .classList.toggle("hidden");
   };
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+"use client";import React, { useState } from "react";
 
 function Index() {
     const [show, setShow] = useState(null);
