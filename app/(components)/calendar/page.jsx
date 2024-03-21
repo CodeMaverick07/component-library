@@ -13,7 +13,6 @@ import Cal_11 from "./calendar/calendar-11.react.jsx";
 import Cal_12 from "./calendar/calendar-12.react.jsx";
 import Cal_13 from "./calendar/calendar-with-stretched-task.react.jsx";
 import Cal_14 from "./calendar/date-picker.react.jsx";
-import Theme from "@/components/Theme.jsx";
 
 export default function Home() {
   return (
