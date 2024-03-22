@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Index = () => {
   const [flag, setFlag] = useState(true);
   return (
-    <div>
+    <div className="relative h-screen">
       <div
         role="alert"
         className={

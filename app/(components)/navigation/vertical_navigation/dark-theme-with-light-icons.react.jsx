@@ -11,7 +11,7 @@ export default function Home() {
     }
   }, [Router]);
   console.log("query", query);
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(true);
   const checkActive = () => {
     if (query.indexOf("inbox") !== -1) {
       return "inbox";
@@ -41,7 +41,7 @@ export default function Home() {
     return "home";
   };
   return (
-    <>
+    <div className="h-[180vh]">
       {
         <div
           onClick={() => setMenu(!menu)}
@@ -66,7 +66,7 @@ export default function Home() {
       }
       {console.log("function", checkActive())}
       {menu && (
-        <div className="overflow-y-scroll lg:overflow-y-auto fixed lg:sticky h-screen lg:h-auto z-40 top-0 bg-gray-900  pt-10 w-64 lg:w-72">
+        <div className="overflow-y-scroll lg:overflow-y-auto lg:sticky h-screen lg:h-auto z-40 top-0 bg-gray-900  pt-10 w-64 lg:w-72">
           <div className="px-8">
             <div className="flex items-center justify-between">
               <div className="w-32">
@@ -381,6 +381,6 @@ export default function Home() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }

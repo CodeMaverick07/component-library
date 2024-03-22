@@ -1,6 +1,5 @@
 import React from "react";
-import Item1 from "./avatar-with-multiple-buttons.react";
-import Item2 from "./coloured-multiple-action-2.react";
+
 import Item3 from "./coloured-no-action.react";
 import Item4 from "./coloured-multiple-action.react";
 import Item5 from "./coloured-multiple-with-separator.react";
@@ -23,10 +22,6 @@ import Item20 from "./multiple-action.react";
 const page = () => {
   return (
     <div>
-      <div className="text-center font-bold text-xl">1</div>
-      <Item1 />
-      <div className="text-center font-bold text-xl">2</div>
-      <Item2 />
       <div className="text-center font-bold text-xl">3</div>
       <Item3 />
       <div className="text-center font-bold text-xl">4</div>
@@ -55,10 +50,10 @@ const page = () => {
       <Item15 />
       <div className="text-center font-bold text-xl">16</div>
       <Item16 />
+
       <div className="text-center font-bold text-xl">17</div>
       <Item17 />
-      <div className="text-center font-bold text-xl">18</div>
-      <Item18 />
+
       <div className="text-center font-bold text-xl">19</div>
       <Item19 />
       <div className="text-center font-bold text-xl">20</div>

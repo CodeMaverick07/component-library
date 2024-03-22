@@ -4,8 +4,8 @@ const Index = () => {
   const [show, setShow] = useState(true);
 
   return (
-    <div>
-      <div className="relative">
+    <div className="h-[80vh] flex justify-center">
+      <div className="py-6">
         <div
           className="bg-white dark:bg-gray-800 flex items-center justify-between border rounded border-gray-300 dark:border-gray-700 w-40 cursor-pointer"
           onClick={() => setShow(!show)}

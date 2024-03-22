@@ -7,12 +7,12 @@ const Index = ({ listing }) => {
   const [toggleSidebar, setToggleSidebar] = useState(true);
 
   return (
-    <div>
+    <div className="h-full">
       {/* Mobile below */}
       <div
         className={
           (toggleSidebar ? "sidebar " : " ") +
-          "pt-12 overflow-y-scroll fixed left-0 h-79vh h-full w-80 xl:w-64 xl:mr-6 2xl:pr-12 2xl:mr-12 pr-6 border-r-2 border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-6 xl:pl-0 z-20 top-0 pt-10 transition-transform duration-150 ease-in-out xl:hidden"
+          "pt-12 overflow-y-scroll left-0 h-79vh h-full w-80 xl:w-64 xl:mr-6 2xl:pr-12 2xl:mr-12 pr-6 border-r-2 border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-6 xl:pl-0 z-20 top-0 pt-10 transition-transform duration-150 ease-in-out xl:hidden"
         }
       >
         <div>
@@ -381,7 +381,7 @@ const Index = ({ listing }) => {
       </div>
       <div
         onClick={() => setToggleSidebar(false)}
-        className="fixed flex justify-center items-center bg-gray-800 dark:bg-gray-50 text-gray-50 dark:text-gray-800 rounded-r-lg w-8 h-8 xl:hidden mt-0 left-0 top-0 mt-10"
+        className=" flex justify-center items-center bg-gray-800 dark:bg-gray-50 text-gray-50 dark:text-gray-800 rounded-r-lg w-8 h-8 xl:hidden mt-0 left-0 top-0 mt-10"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -405,7 +405,7 @@ const Index = ({ listing }) => {
         <div className="d-sidebar w-80 xl:w-64 2xl:w-96 px-12 mr-12" />
         <div
           className={
-            "d-sidebar pt-16 fixed overflow-y-auto h-79vh h-full w-80 xl:w-64 2xl:w-96 xl:mr-6 2xl:pr-12 2xl:mr-12 pr-6 border-r-2 border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-6 xl:pl-12 z-0 top-0 pt-10 transition-transform duration-150 ease-in-out"
+            "d-sidebar pt-16 overflow-y-auto h-79vh h-full w-80 xl:w-64 2xl:w-96 xl:mr-6 2xl:pr-12 2xl:mr-12 pr-6 border-r-2 border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-6 xl:pl-12 z-0 top-0 pt-10 transition-transform duration-150 ease-in-out"
           }
         >
           <div>

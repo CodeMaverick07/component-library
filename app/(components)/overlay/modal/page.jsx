@@ -4,7 +4,6 @@ import Item2 from "./centre-aligned-file-upload.react";
 import Item3 from "./centre-aligned-long.react";
 import Item4 from "./centre-aligned-short.react";
 
-import Item6 from "./invoices.react";
 import Item7 from "./left-aligned-file-upload.react";
 import Item8 from "./left-aligned-form.react";
 import Item9 from "./left-aligned-long.react";
@@ -63,6 +62,22 @@ import Item60 from "./with-text-input.react";
 const page = () => {
   return (
     <div>
+      <div className="text-center font-bold text-xl">1</div>
+      <Item1 />
+      <div className="text-center font-bold text-xl">2</div>
+      <Item2 />
+      <div className="text-center font-bold text-xl">3</div>
+      <Item3 />
+      <div className="text-center font-bold text-xl">4</div>
+      <Item4 />
+      <div className="text-center font-bold text-xl">7</div>
+      <Item7 />
+      <div className="text-center font-bold text-xl">8</div>
+      <Item8 />
+      <div className="text-center font-bold text-xl">9</div>
+      <Item9 />
+      <div className="text-center font-bold text-xl">10</div>
+      <Item10 />
       <div className="text-center font-bold text-xl">11</div>
       <Item11 />
       <div className="text-center font-bold text-xl">12</div>
@@ -86,6 +101,8 @@ const page = () => {
       <div className="text-center font-bold text-xl">21</div>
       <Item21 /> <div className="text-center font-bold text-xl">22</div>
       <Item22 />
+      <div className="text-center font-bold text-xl">23</div>
+      <Item23 />
       <div className="text-center font-bold text-xl">24</div>
       <Item24 /> <div className="text-center font-bold text-xl">25</div>
       <Item25 /> <div className="text-center font-bold text-xl">26</div>
@@ -152,6 +169,8 @@ const page = () => {
       <Item58 />
       <div className="text-center font-bold text-xl">59</div>
       <Item59 />
+      <div className="text-center font-bold text-xl">60</div>
+      <Item60 />
     </div>
   );
 };

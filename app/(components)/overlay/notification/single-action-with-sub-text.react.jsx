@@ -6,7 +6,7 @@ const Index = () => {
     <div
       className={
         flag
-          ? "xl:w-5/12 mx-auto sm:mx-0 sm:w-6/12 md:w-6/12 w-10/12 bg-white shadow-lg rounded flex pr-4 absolute left-0 sm:left-auto right-0 sm:top-0 sm:mr-6 mt-16 sm:mt-6 mb-6 dark:bg-gray-800 sm:mb-0 transition duration-150 ease-in-out translate-show"
+          ? "xl:w-5/12 mx-auto sm:mx-0 relative sm:w-6/12 md:w-6/12 w-10/12 bg-white shadow-lg rounded flex pr-4 left-0 sm:left-auto right-0 sm:top-0 sm:mr-6 mt-16 sm:mt-6 mb-6 dark:bg-gray-800 sm:mb-0 transition duration-150 ease-in-out translate-show"
           : "translate-hide"
       }
     >

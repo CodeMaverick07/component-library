@@ -7,7 +7,7 @@ const Index = () => {
       role="alert"
       classname={
         flag
-          ? "sm:mr-6 mt-16 sm:mt-6 mb-6 sm:mb-0 xl:w-5 mx-auto absolute left-0 sm:left-auto right-0 sm:top-0 sm:w-6 md:w-3 w-11 bg-white shadow-lg rounded flex sm:flex-row flex-col pr-4 transition duration-150 ease-in-out translate-show dark:bg-gray-800"
+          ? "sm:mr-6 mt-16 sm:mt-6 mb-6 sm:mb-0 xl:w-5 mx-auto relative left-0 sm:left-auto right-0 sm:top-0 sm:w-6 md:w-3 w-11 bg-white shadow-lg rounded flex sm:flex-row flex-col pr-4 transition duration-150 ease-in-out translate-show dark:bg-gray-800"
           : "translate-hide"
       }
       id="notification"

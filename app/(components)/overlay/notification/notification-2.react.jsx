@@ -6,7 +6,7 @@ function Index() {
   const [show, setShow] = useState(true);
   return (
     <>
-      <div className="py-8">
+      <div className="py-8 relative">
         <div className="flex items-end justify-end sm:mr-12 mr-6">
           {/*code for notification starts*/}
           <div

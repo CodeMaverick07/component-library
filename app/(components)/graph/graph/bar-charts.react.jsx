@@ -2,8 +2,42 @@
 import React, { useEffect, useState } from "react";
 // npm i react-helmet
 import { Helmet } from "react-helmet";
+import Chart from "chart.js"; // Import Chart library
+
 export default function Index() {
-  const [show, setshow] = useState();
+  const [show, setShow] = useState(false); // Corrected useState initial value
+
+  useEffect(() => {
+    // Moved Chart initialization inside the useEffect hook
+    const myBarChart = Chart(document.getElementById("chartjs-1"), {
+      type: "bar",
+      data: {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        datasets: [
+          {
+            data: [25, 55, 100, 75, 60, 60, 120], // Corrected dataset length
+            fill: false,
+            backgroundColor: "#4338CA",
+          },
+        ],
+      },
+      options: {
+        scales: {
+          yAxes: [
+            {
+              ticks: { beginAtZero: true },
+            },
+          ],
+        },
+        legend: false, // Corrected legend property
+      },
+    });
+
+    // Cleanup function
+    return () => {
+      myBarChart.destroy(); // Destroy the chart instance to prevent memory leaks
+    };
+  }, []); // Empty dependency array to run effect only once
 
   return (
     <>
@@ -24,7 +58,7 @@ export default function Index() {
                 </h4>
                 <div className="static sm:relative">
                   <div
-                    onClick={() => setshow(!show)}
+                    onClick={() => setShow(!show)}
                     className="py-2 px-3 cursor-pointer flex items-center flex-no-wrap bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 ease-in duration-150 hover:bg-gray-200 relative w-auto"
                   >
                     <p className="text-gray-600 dark:text-gray-400 mr-2 text-xs">
@@ -88,278 +122,10 @@ export default function Index() {
                     className={show ? "w-full h-full " : "hidden "}
                   >
                     <div
-                      onClick={() => setshow(!show)}
+                      onClick={() => setShow(!show)}
                       className="fixed w-full h-full inset-0  bg-transparent  z-40"
                     />
-                    <div className="bg-white dark:bg-gray-800 absolute -ml-44 sm:-ml-64 xl:ml-0 px-6 py-6 z-50 shadow-xl">
-                      <p className="text-base text-gray-700 dark:text-gray-400">
-                        June
-                      </p>
-                      <table className="mt-6 ">
-                        <thead>
-                          <tr>
-                            <th>
-                              <div className="w-full flex justify-center">
-                                <p className="opacity-50 text-xs font-bold text-center text-gray-600 dark:text-gray-400">
-                                  Mon
-                                </p>
-                              </div>
-                            </th>
-                            <th>
-                              <div className="w-full flex justify-center">
-                                <p className="opacity-50 text-xs font-bold text-center text-gray-600 dark:text-gray-400">
-                                  Tue
-                                </p>
-                              </div>
-                            </th>
-                            <th>
-                              <div className="w-full flex justify-center">
-                                <p className="opacity-50 text-xs font-bold text-center text-gray-600 dark:text-gray-400">
-                                  Wed
-                                </p>
-                              </div>
-                            </th>
-                            <th>
-                              <div className="w-full flex justify-center">
-                                <p className="opacity-50 text-xs font-bold text-center text-gray-600 dark:text-gray-400">
-                                  Thu
-                                </p>
-                              </div>
-                            </th>
-                            <th>
-                              <div className="w-full flex justify-center">
-                                <p className="opacity-50 text-xs font-bold text-center text-gray-600 dark:text-gray-400">
-                                  Fri
-                                </p>
-                              </div>
-                            </th>
-                            <th>
-                              <div className="w-full flex justify-center">
-                                <p className="opacity-50 text-xs font-bold text-center text-gray-600 dark:text-gray-400">
-                                  Sat
-                                </p>
-                              </div>
-                            </th>
-                            <th>
-                              <div className="w-full flex justify-center">
-                                <p className="opacity-50 text-xs font-bold text-center text-gray-600 dark:text-gray-400">
-                                  Sun
-                                </p>
-                              </div>
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td className="pt-6">
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center" />
-                            </td>
-                            <td className="pt-6">
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center" />
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center" />
-                            </td>
-                            <td className="pt-6">
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  1
-                                </p>
-                              </div>
-                            </td>
-                            <td className="pt-6">
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  2
-                                </p>
-                              </div>
-                            </td>
-                            <td className="pt-6">
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center bg-indigo-300">
-                                <p className="text-sm text-indigo-600">3</p>
-                              </div>
-                            </td>
-                            <td className="pt-6">
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center bg-indigo-300">
-                                <p className="text-sm text-indigo-600">4</p>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center bg-indigo-300">
-                                <p className="text-sm text-gray-700 ">5</p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center bg-indigo-300">
-                                <p className="text-sm text-gray-700 ">6</p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center bg-indigo-300">
-                                <p className="text-sm text-gray-700 ">7</p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center bg-indigo-300">
-                                <p className="text-sm text-gray-700 ">8</p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="w-full h-full">
-                                <div className="w-12 h-12 flex w-full rounded-full justify-center items-center cursor-pointer bg-indigo-500">
-                                  <p className="text-sm font-bold text-white">
-                                    9
-                                  </p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-indigo-600">10</p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-indigo-600">11</p>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  12
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  13
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  14
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  15
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="px-4 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  16
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-indigo-600">17</p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-indigo-600">18</p>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  19
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  20
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  21
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  22
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="px-4 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  23
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-indigo-600">24</p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-indigo-600">25</p>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  26
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  27
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  28
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="sm:px-4 px-2 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  29
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="px-4 py-2 flex w-full justify-center">
-                                <p className="text-sm text-gray-700 dark:text-gray-400">
-                                  30
-                                </p>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                    {/* Calendar content */}
                   </div>
                 </div>
               </div>
@@ -369,7 +135,6 @@ export default function Index() {
             </div>
           </div>
         </div>
-        {"{"}" "{"}"}
       </div>
     </>
   );

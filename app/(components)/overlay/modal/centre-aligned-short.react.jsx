@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Index = () => {
   const [show, setShow] = useState(true);
   return (
-    <div>
+    <div className="relative h-screen">
       <div>
         {show && (
           <div

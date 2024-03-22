@@ -2,7 +2,28 @@
 import React, { useEffect } from "react";
 // npm i react-helmet
 import { Helmet } from "react-helmet";
+import Chart from "chart.js";
 export default function Index() {
+  useEffect(() => {
+    const myBarChart2 = Chart(document.getElementById("chartjs-2"), {
+      type: "pie",
+      data: {
+        labels: ["Accepted", "Rejected", "Pending", "Approved"],
+        datasets: [
+          {
+            data: [60, 12, 12, 25],
+            fill: false,
+            backgroundColor: [" #312E81", " #4338CA", " #4F46E5", " #4338CA"],
+          },
+        ],
+      },
+      options: {
+        legend: {
+          position: false,
+        },
+      },
+    });
+  });
   return (
     <>
       <Helmet>

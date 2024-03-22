@@ -37,7 +37,7 @@ function index() {
   }
   return (
     <>
-      <div className="py-12 px-4">
+      <div className="">
         <div className="lg:max-w-[356px] md:max-w-[356px] max-w-[343px] mx-auto pt-4 pb-52">
           <div className="mt-8 px-6">
             <div className="dropdown-one w-full rounded outline-none bg-white relative mt-2 shadow-md">

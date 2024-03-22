@@ -33,12 +33,6 @@ const page = () => {
       <Toggle8 />
       <div className="text-center font-bold text-xl">9</div>
       <Toggle9 />
-      <div className="text-center font-bold text-xl">10</div>
-      <Toggle10 />
-      <div className="text-center font-bold text-xl">11</div>
-      <Toggle11 />
-      <div className="text-center font-bold text-xl">12</div>
-      <Toggle12 />
     </div>
   );
 };

@@ -5,7 +5,7 @@ export default function Index() {
   const [show, setShow] = useState(false);
 
   return (
-    <div>
+    <div className="relative h-screen">
       <div className="bg-gray-50 xl:hidden flex justify-between w-full p-6 items-center ">
         <div className="flex justify-between  items-center space-x-3">
           <svg
