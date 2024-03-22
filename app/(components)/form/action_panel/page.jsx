@@ -11,7 +11,7 @@ import From9 from "./text-field-and-button.react";
 
 const page = () => {
   return (
-    <div className="flex justify-center">
+    <div className="">
       <div className="h-screen">
         {" "}
         <div className="text-center text-xl font-bold">1</div>
