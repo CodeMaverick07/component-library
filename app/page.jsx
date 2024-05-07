@@ -5,7 +5,6 @@ export default function Home() {
     { name: "calendar" },
     { name: "feedback" },
     { name: "form" },
-    { name: "graph" },
     { name: "heading" },
     { name: "layout" },
     { name: "master_layout" },
